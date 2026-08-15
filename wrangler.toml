@@ -1,0 +1,17 @@
+name = "secure-worker"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+# Bind the private R2 bucket that stores country flag images.
+[[r2_buckets]]
+binding = "FLAGS"
+bucket_name = "country-flags"
+
+# Run this Worker on the Access-protected /secure paths of the tunnel hostname.
+[[routes]]
+pattern = "tunnel.boyoungk-dev.xyz/secure"
+zone_name = "boyoungk-dev.xyz"
+
+[[routes]]
+pattern = "tunnel.boyoungk-dev.xyz/secure/*"
+zone_name = "boyoungk-dev.xyz"
