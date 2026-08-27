@@ -1,8 +1,6 @@
 # secure-worker
 
-A Cloudflare Worker built for the Solutions Engineer technical assignment.
-
-It serves the Access-protected `/secure` paths of `tunnel.boyoungk-dev.xyz`
+This project serves the Access-protected `/secure` paths of `tunnel.boyoungk-dev.xyz`
 (a hostname that reaches the origin through Cloudflare Tunnel) and returns the
 authenticated user's identity plus a country flag stored in a **private R2
 bucket**.
